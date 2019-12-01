@@ -27,17 +27,17 @@ struct node* createNode() {
     return new;
 }
 
-void printData(){
+void printData() {
     if(head!=NULL) {
         NODE *front = head;
-        int a = 1,b=1;
+        int a = 1;
         while(a) {
             printf("data is : %d\n",front->data);
             printf("preset node address : %d\n",front);
             printf("present node next : %d\n",front->next);
             printf("present node prev : %d\n",front->prev);
             front = front->next;
-            if(front==NULL) {
+            if (front==NULL) {
                 break;
             } else if (front == head) {
                 a=0;
@@ -51,10 +51,10 @@ void printData(){
 }
 
 void addNode(int data) {
-    if(head==NULL) {
+    if (head==NULL) {
         printf("head is null. creating a head with data : %d\n",data);
         head = createNode();
-        if(head!=NULL){
+        if (head!=NULL) {
             head->data = data;
             head->next = NULL;
             head->prev = NULL;
@@ -66,7 +66,7 @@ void addNode(int data) {
     } else {
         printf("Creating a new node with data : %d\n",data);
         temp = createNode();
-        if(temp!=NULL) {
+        if (temp!=NULL) {
             temp->data = data;
             last->next = temp;
             head->prev = temp;
@@ -84,21 +84,21 @@ void addNode(int data) {
 int main() {
     int data,a=0;
     printf("Please choose options below:\n");
-    while(1){
+    while(1) {
         printf("choose :\n1. for adding a node press 1\n2. printing data press 2\n");
         scanf("%d",&n);
-        switch(n){
+        switch(n) {
             case 1: printf("\nPlease enter data in integer format:\n");
-                     scanf("%d",&data);
-                     addNode(data);
-                     break;
+                    scanf("%d",&data);
+                    addNode(data);
+                    break;
             case 2: printf("printing data\n");
                     printData();
                     break;
             default: a=1;
                      break;
         }
-        if(a){
+        if (a) {
             break;
         }
     }
