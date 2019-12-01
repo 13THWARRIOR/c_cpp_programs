@@ -1,0 +1,41 @@
+1. create a node using struct having one data and two address saving nodes
+    typedef struct node {
+        int data;
+        struct node* next, prev;
+    }
+    global head and last and temp nodes
+
+2. create a function to create more nodes
+   node = malloc(size of node)
+   have a global varible to count all nodes added
+   divide the varible by 2 and get middle store in global variable.
+ 
+3. add node
+   have a head -> if head is null -> add data and make next and prev = null
+               -> if head is not null -> make a new node and put data 
+                                         make new node next to head node and head prev to 
+                                         to new node
+                                         make last node's next to new node's and new node
+                                         prev to last node 
+
+4. add to middle
+   move from head to middle by middle stored global variable.
+   create a node and add data and
+   middle node next to new node next.
+   middle plus +1 node prev to new node.
+   middle node to new node prev
+   middle node next to new node  
+
+5. add to specific place
+   - ask user for a position to place it 1 to n based on counter of number of nodes present
+   - if user types in invalid position say its not possible for that position and add to last
+     if no node add to head, if user says ok yes 
+   - if position satisfy put it there
+        create node and add data
+        from head traverse to the position specified
+        position node to new node next
+        position node prev to new node prev
+        position node -1 node next to new node
+        position node prev to new node.
+
+6. main with a do while 
