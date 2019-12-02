@@ -12,9 +12,9 @@ typedef struct node {
 NODE *head, *temp, *last;
 
 struct node* createNode() {
-    NODE *new = NULL;
-    new = malloc(sizeof(NODE));
-    if (new == NULL) {
+    NODE *newNode = NULL;
+    newNode = malloc(sizeof(NODE));
+    if (newNode == NULL) {
         printf("Memory not allocated.\n");
         return NULL;
     }
@@ -24,7 +24,7 @@ struct node* createNode() {
         mid = count/2;
         printf("mid is : %d\n",mid);
     }
-    return new;
+    return newNode;
 }
 
 void printData() {
