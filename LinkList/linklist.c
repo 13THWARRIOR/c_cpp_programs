@@ -33,7 +33,7 @@ void printData() {
         int a = 1;
         while(a) {
             printf("data is : %d\n",front->data);
-            printf("preset node address : %d\n",front);
+            printf("present node address : %d\n",front);
             printf("present node next : %d\n",front->next);
             printf("present node prev : %d\n",front->prev);
             front = front->next;
